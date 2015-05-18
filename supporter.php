@@ -2,10 +2,10 @@
 /*
  * Plugin Name: Supporter
  * Version: 1.0
- * Plugin URI: http://www.hughlashbrooke.com/
- * Description: This is your starter template for your next WordPress plugin.
- * Author: Hugh Lashbrooke
- * Author URI: http://www.hughlashbrooke.com/
+ * Plugin URI: https://github.com/nguyenphucthanh/wordpress-plugin-supporter
+ * Description: Supporter management with floating widget, support Skype, Yahoo and Telephone
+ * Author: Nguyen Phuc Thanh
+ * Author URI: https://github.com/nguyenphucthanh/wordpress-plugin-supporter
  * Requires at least: 4.0
  * Tested up to: 4.0
  *
@@ -13,7 +13,7 @@
  * Domain Path: /lang/
  *
  * @package WordPress
- * @author Hugh Lashbrooke
+ * @author Nguyen Phuc Thanh
  * @since 1.0.0
  */
 

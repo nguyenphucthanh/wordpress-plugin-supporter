@@ -1,0 +1,242 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Supporter Plugin\n"
+"POT-Creation-Date: 2015-05-19 00:17+0700\n"
+"PO-Revision-Date: 2015-05-19 00:17+0700\n"
+"Last-Translator: \n"
+"Language-Team: Nguyen Phuc Thanh <nguyenphucthanh@live.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: supporter-add-metabox.php:7 supporter-add-metabox.php:33
+msgid "Skype ID"
+msgstr ""
+
+#: supporter-add-metabox.php:40
+msgid "Yahoo ID"
+msgstr ""
+
+#: supporter-add-metabox.php:47
+msgid "Phone Number"
+msgstr ""
+
+#: supporter-float-widget.php:48 supporter.php:49
+msgid "Supporters"
+msgstr ""
+
+#: supporter.php:49
+msgid "Supporter"
+msgstr ""
+
+#: includes/class-supporter-settings.php:70
+#: includes/class-supporter-settings.php:195
+msgid "Supporter Settings"
+msgstr ""
+
+#: includes/class-supporter-settings.php:99
+msgid "Settings"
+msgstr ""
+
+#: includes/class-supporter-settings.php:111
+msgid "Supporter floating widget"
+msgstr ""
+
+#: includes/class-supporter-settings.php:112
+msgid "Custom setting for Supporter floating widget"
+msgstr ""
+
+#: includes/class-supporter-settings.php:116
+msgid "Enable"
+msgstr ""
+
+#: includes/class-supporter-settings.php:117
+msgid "Enable Supporter floating widget"
+msgstr ""
+
+#: includes/class-supporter-settings.php:123
+msgid "Custom CSS"
+msgstr ""
+
+#: includes/class-supporter-settings.php:124
+msgid "Enter custom CSS for Supporter floating widget"
+msgstr ""
+
+#: includes/class-supporter-settings.php:127
+msgid "Enter custom CSS here"
+msgstr ""
+
+#: includes/class-supporter-settings.php:247
+msgid "Save Settings"
+msgstr ""
+
+#: includes/class-supporter-settings.php:278
+#: includes/class-supporter-settings.php:287 includes/class-supporter.php:243
+#: includes/class-supporter.php:252
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/lib/class-supporter-admin-api.php:159
+msgid "Upload an image"
+msgstr ""
+
+#: includes/lib/class-supporter-admin-api.php:159
+msgid "Use image"
+msgstr ""
+
+#: includes/lib/class-supporter-admin-api.php:159
+msgid "Upload new image"
+msgstr ""
+
+#: includes/lib/class-supporter-admin-api.php:160
+msgid "Remove image"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:68
+#: includes/lib/class-supporter-taxonomy.php:70
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:69
+#: includes/lib/class-supporter-taxonomy.php:67
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:70
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:71
+#: includes/lib/class-supporter-taxonomy.php:66
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:72
+#: includes/lib/class-supporter-taxonomy.php:68
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:73
+#: includes/lib/class-supporter-taxonomy.php:74
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:74
+#, php-format
+msgid "No %s Found"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:75
+#, php-format
+msgid "No %s Found In Trash"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:76
+#: includes/lib/class-supporter-taxonomy.php:72
+#, php-format
+msgid "Parent %s"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:113
+#, php-format
+msgid "%1$s updated. %2$sView %3$s%4$s."
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:114
+msgid "Custom field updated."
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:115
+msgid "Custom field deleted."
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:116
+#, php-format
+msgid "%1$s updated."
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:117
+#, php-format
+msgid "%1$s restored to revision from %2$s."
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:118
+#, php-format
+msgid "%1$s published. %2$sView %3$s%4s."
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:119
+#, php-format
+msgid "%1$s saved."
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:120
+#, php-format
+msgid "%1$s submitted. %2$sPreview post%3$s%4$s."
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:121
+#, php-format
+msgid "%1$s scheduled for: %2$s. %3$sPreview %4$s%5$s."
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:121
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: includes/lib/class-supporter-post-type.php:122
+#, php-format
+msgid "%1$s draft updated. %2$sPreview %3$s%4$s."
+msgstr ""
+
+#: includes/lib/class-supporter-taxonomy.php:69
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: includes/lib/class-supporter-taxonomy.php:71
+#, php-format
+msgid "New %s Name"
+msgstr ""
+
+#: includes/lib/class-supporter-taxonomy.php:73
+#, php-format
+msgid "Parent %s:"
+msgstr ""
+
+#: includes/lib/class-supporter-taxonomy.php:75
+#, php-format
+msgid "Popular %s"
+msgstr ""
+
+#: includes/lib/class-supporter-taxonomy.php:76
+#, php-format
+msgid "Separate %s with commas"
+msgstr ""
+
+#: includes/lib/class-supporter-taxonomy.php:77
+#, php-format
+msgid "Add or remove %s"
+msgstr ""
+
+#: includes/lib/class-supporter-taxonomy.php:78
+#, php-format
+msgid "Choose from the most used %s"
+msgstr ""
+
+#: includes/lib/class-supporter-taxonomy.php:79
+#, php-format
+msgid "No %s found"
+msgstr ""
