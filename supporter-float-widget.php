@@ -50,36 +50,48 @@ function loadSupporters() {
 		<div class="supporter-float-widget-content">
 			<?php
 				foreach ($supporters as $supporter) {
+					$instant = array();
+					foreach ($supporter->meta_info as $meta) {
+						$key = $meta->meta_key;
+						$value = $meta->meta_value;
+						if(!is_null($value) && strlen($value) > 0) {
+							if($key == 'skype_id') {
+								$instant['skype_id'] = $value;
+							}
+							else if($key == 'yahoo_id') {
+								$instant['yahoo_id'] = $value;
+							}
+							else if($key == 'tel_number') {
+								$instant['tel_number'] = $value;
+							}
+						}
+					}
 					?>
-						<div class="supporter-item">
+						<div class="supporter-item columns-<?php echo count($instant); ?>">
 							<div class="supporter-item-name">
 								<span class="fa fa-user"></span> <?php echo $supporter->post_title; ?>
 							</div>
 							<?php
-								foreach ($supporter->meta_info as $meta) {
-									$key = $meta->meta_key;
-									$value = $meta->meta_value;
-									if($key == 'skype_id') {
-										?>
-											<a class="skype" href="skype:<?php echo $value; ?>?chat">
-												<span class="fa fa-skype fa-2x"></span>
-											</a>
-										<?php
-									}
-									else if($key == 'yahoo_id') {
-										?>
-											<a class="yahoo" href="ymsgr:sendIM?<?php echo $value; ?>">
-												<span class="fa fa-yahoo fa-2x"></span>
-											</a>
-										<?php
-									}
-									else if($key == 'tel_number') {
-										?>
-											<a class="tel" href="tel:<?php echo $value; ?>">
-												<span class="fa fa-phone fa-2x"></span>
-											</a>
-										<?php
-									}
+								if(isset($instant['skype_id'])) {
+									?>
+										<a class="skype" href="skype:<?php echo $instant['skype_id']; ?>?chat">
+											<span class="fa fa-skype fa-2x"></span>
+										</a>
+									<?php
+								}
+								if(isset($instant['yahoo_id'])) {
+									?>
+										<a class="yahoo" href="ymsgr:sendIM?<?php echo $instant['yahoo_id']; ?>">
+											<span class="fa fa-yahoo fa-2x"></span>
+										</a>
+									<?php
+								}
+								if(isset($instant['tel_number'])) {
+									?>
+										<a class="tel" href="tel:<?php echo $instant['tel_number']; ?>">
+											<span class="fa fa-phone fa-2x"></span>
+										</a>
+									<?php
 								}
 							?>
 						</div>
