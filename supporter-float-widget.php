@@ -17,7 +17,7 @@ function loadSupporters() {
 		WHERE $wpdb->posts.post_status = 'publish' 
 		AND $wpdb->posts.post_type = 'supporter'
 		AND $wpdb->posts.post_date < NOW()
-		ORDER BY $wpdb->posts.post_date DESC
+		ORDER BY $wpdb->posts.post_date ASC
 	";
 
 	$supporters = $wpdb->get_results($querystr, OBJECT);
