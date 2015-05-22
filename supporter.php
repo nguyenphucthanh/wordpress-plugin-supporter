@@ -27,11 +27,15 @@ require_once( 'includes/class-supporter-settings.php' );
 require_once( 'includes/lib/class-supporter-admin-api.php' );
 require_once( 'includes/lib/class-supporter-post-type.php' );
 require_once( 'includes/lib/class-supporter-taxonomy.php' );
+
 /*Add metabox*/
 require_once( 'supporter-add-metabox.php' );
 
 /*Float widget*/
 require_once( 'supporter-float-widget.php' );
+
+/*Float widget*/
+require_once( 'supporter-shortcode.php' );
 
 /**
  * Returns the main instance of Supporter to prevent the need to use globals.

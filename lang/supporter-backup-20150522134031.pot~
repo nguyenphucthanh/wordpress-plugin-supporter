@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Wordpress Supporter Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-19 00:17+0700\n"
-"POT-Revision-Date: Fri May 22 2015 12:48:12 GMT+0700 (SE Asia Standard Time)\n"
+"POT-Revision-Date: Fri May 22 2015 19:42:32 GMT+0700 (SE Asia Standard Time)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: Nguyen Phuc Thanh <nguyenphucthanh@live.com>\n"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "Phone Number"
 msgstr ""
 
-#: ../supporter-float-widget.php:48 ../supporter.php:54
+#: ../supporter-float-widget.php:27 ../supporter.php:54
 msgid "Supporters"
 msgstr ""
 

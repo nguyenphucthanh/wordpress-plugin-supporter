@@ -196,3 +196,42 @@
 		}
 	}
 }
+
+
+/*Bootstrap grid*/
+.supporter-grid {
+	li {
+		h5 {
+			font-weight: bold;
+			font-size: 1.286em;
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			border-bottom: solid 1px #cccccc;
+		}
+		.fa {
+			display: inline-block;
+			text-align: center;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 15px;
+			vertical-align: middle;
+			color: white;
+			&:before {
+				line-height: 30px;
+			}
+			&.fa-skype {
+				background: @color_skype;				
+			}
+			&.fa-yahoo {
+				background: @color_yahoo;				
+			}
+			&.fa-phone {
+				background: @color_tel;				
+			}
+		}
+		li {
+			margin-bottom: 15px;
+		}
+	}
+}
