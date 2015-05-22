@@ -1,5 +1,5 @@
 <?php
-
+require_once( 'includes/lib/class-supporter-object.php' );
 function loadSupporters() {
 	$optionEnableFloat = get_option('supporter_enable_float', true);
 	$optionCustomCSS = get_option('supporter_custom_css', '');
@@ -7,31 +7,10 @@ function loadSupporters() {
 		return;
 	}
 
-	global $wpdb;
-	$querystr = "
-		SELECT $wpdb->posts.ID,
-		$wpdb->posts.post_title
+	$supporters = Supporter_Object::getAll();
 
-		FROM $wpdb->posts
-		
-		WHERE $wpdb->posts.post_status = 'publish' 
-		AND $wpdb->posts.post_type = 'supporter'
-		AND $wpdb->posts.post_date < NOW()
-		ORDER BY $wpdb->posts.post_date ASC
-	";
-
-	$supporters = $wpdb->get_results($querystr, OBJECT);
-
-	foreach ($supporters as $key => $value) {
-		$query = "
-		SELECT $wpdb->postmeta.meta_key, $wpdb->postmeta.meta_value
-
-		FROM $wpdb->postmeta
-
-		WHERE $wpdb->postmeta.post_id = " . $supporters[$key]->ID . "
-		";
-
-		$supporters[$key]->meta_info = $wpdb->get_results($query, OBJECT);
+	if(count($supporters) == 0) {
+		return;
 	}
 
 	?>
@@ -50,46 +29,35 @@ function loadSupporters() {
 		<div class="supporter-float-widget-content">
 			<?php
 				foreach ($supporters as $supporter) {
-					$instant = array();
-					foreach ($supporter->meta_info as $meta) {
-						$key = $meta->meta_key;
-						$value = $meta->meta_value;
-						if(!is_null($value) && strlen($value) > 0) {
-							if($key == 'skype_id') {
-								$instant['skype_id'] = $value;
-							}
-							else if($key == 'yahoo_id') {
-								$instant['yahoo_id'] = $value;
-							}
-							else if($key == 'tel_number') {
-								$instant['tel_number'] = $value;
-							}
-						}
+					$haveTel = '';
+					if(strlen($supporter->tel_number) > 0) {
+						$haveTel = 'have-tel';
 					}
 					?>
-						<div class="supporter-item columns-<?php echo count($instant); ?>">
+						<div class="supporter-item columns-<?php echo $supporter->columns; ?> <?php echo $haveTel; ?>">
 							<div class="supporter-item-name">
-								<span class="fa fa-user"></span> <?php echo $supporter->post_title; ?>
+								<span class="fa fa-user"></span> <?php echo $supporter->name; ?>
 							</div>
 							<?php
-								if(isset($instant['skype_id'])) {
+								if(strlen($supporter->tel_number) > 0) {
 									?>
-										<a class="skype" href="skype:<?php echo $instant['skype_id']; ?>?chat">
+										<a class="tel" href="tel:<?php echo $supporter->tel_number_formatted; ?>">
+											<span class="fa fa-phone fa-2x"></span>
+											<?php echo $supporter->tel_number; ?>
+										</a>
+									<?php
+								}
+								if(strlen($supporter->skype_id) > 0) {
+									?>
+										<a class="skype" href="skype:<?php echo $supporter->skype_id; ?>?chat">
 											<span class="fa fa-skype fa-2x"></span>
 										</a>
 									<?php
 								}
-								if(isset($instant['yahoo_id'])) {
+								if(strlen($supporter->yahoo_id) > 0) {
 									?>
-										<a class="yahoo" href="ymsgr:sendIM?<?php echo $instant['yahoo_id']; ?>">
+										<a class="yahoo" href="ymsgr:sendIM?<?php echo $supporter->yahoo_id; ?>">
 											<span class="fa fa-yahoo fa-2x"></span>
-										</a>
-									<?php
-								}
-								if(isset($instant['tel_number'])) {
-									?>
-										<a class="tel" href="tel:<?php echo $instant['tel_number']; ?>">
-											<span class="fa fa-phone fa-2x"></span>
 										</a>
 									<?php
 								}

@@ -92,12 +92,23 @@
 
 		&.columns-3 {
 			a {
-				width: 100% / 3;
+				width: 20%;
+				&.tel {
+					width: 60%;
+				}
 			}
 		}
 		&.columns-2 {
 			a {
-				width: 100% / 2;
+				width: 50%;
+			}
+			&.have-tel {
+				a {
+					width: 40%;
+					&.tel {
+						width: 60%;
+					}
+				}
 			}
 		}
 		&.columns-1 {
@@ -114,6 +125,7 @@
 			text-align: center;
 			color: @white;
 			transition: all 0.5s ease;
+			overflow: hidden;
 
 			&:active {
 				box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
@@ -142,6 +154,10 @@
 				&:hover {
 					background: darken(@color_tel, 20%);
 				}
+			}
+
+			.fa {
+				vertical-align: middle;
 			}
 		}
 	}
