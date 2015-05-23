@@ -2,7 +2,8 @@
 /*shortcode*/
 function shortcodeBootstrapGrid( $atts ) {
 	$a = shortcode_atts( array(
-        'columns' => 2
+        'columns' => 2,
+        'show_text' => false
     ), $atts );
 
 	$supporters = Supporter_Object::getAll();
@@ -26,8 +27,11 @@ function shortcodeBootstrapGrid( $atts ) {
 							<ul class="list-inline">
 								<?php if(strlen($spt->tel_number) > 0) { ?>
 									<li>
-										<a href="tel:<?php echo $spt->tel_number_formatter; ?>">
-											<i class="fa fa-phone"></i> <?php echo $spt->tel_number; ?>
+										<a href="tel:<?php echo $spt->tel_number_formatted; ?>">
+											<i class="fa fa-phone"></i> 
+											<?php
+												echo $spt->tel_number;
+											?>
 										</a>
 									</li>
 								<?php } ?>
@@ -35,7 +39,12 @@ function shortcodeBootstrapGrid( $atts ) {
 								<?php if(strlen($spt->skype_id) > 0) { ?>
 									<li>
 										<a href="skype:<?php echo $spt->skype_id; ?>?chat">
-											<i class="fa fa-skype"></i> <?php echo $spt->skype_id; ?>
+											<i class="fa fa-skype"></i> 
+											<?php 
+												if($a['show_text']) {
+													echo $spt->skype_id; 
+												}
+											?>
 										</a>
 									</li>
 								<?php } ?>
@@ -43,7 +52,12 @@ function shortcodeBootstrapGrid( $atts ) {
 								<?php if(strlen($spt->yahoo_id) > 0) { ?>
 									<li>
 										<a href="ymsgr:sendIM?<?php echo $spt->yahoo_id; ?>">
-											<i class="fa fa-yahoo"></i> <?php echo $spt->yahoo_id; ?>
+											<i class="fa fa-yahoo"></i> 
+											<?php 
+												if($a['show_text']) {
+													echo $spt->yahoo_id; 
+												}
+											?>
 										</a>
 									</li>
 								<?php } ?>
