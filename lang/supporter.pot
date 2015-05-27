@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Wordpress Supporter Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-19 00:17+0700\n"
-"POT-Revision-Date: Fri May 22 2015 20:40:30 GMT+0700 (SE Asia Standard Time)\n"
+"POT-Revision-Date: Wed May 27 2015 12:05:28 GMT+0700 (SE Asia Standard Time)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: Nguyen Phuc Thanh <nguyenphucthanh@live.com>\n"
@@ -45,7 +45,7 @@ msgid "Supporter"
 msgstr ""
 
 #: ../includes/class-supporter-settings.php:70 ../includes/class-supporter-
-#: settings.php:70 ../includes/class-supporter-settings.php:195
+#: settings.php:70 ../includes/class-supporter-settings.php:202
 msgid "Supporter Settings"
 msgstr ""
 
@@ -81,12 +81,20 @@ msgstr ""
 msgid "Enter custom CSS here"
 msgstr ""
 
-#: ../includes/class-supporter-settings.php:247
+#: ../includes/class-supporter-settings.php:131
+msgid "Include AwesomeFont CDN"
+msgstr ""
+
+#: ../includes/class-supporter-settings.php:132
+msgid "Include AwesomeFont CSS from CDN"
+msgstr ""
+
+#: ../includes/class-supporter-settings.php:254
 msgid "Save Settings"
 msgstr ""
 
-#: ../includes/class-supporter-settings.php:278 ../includes/class-supporter-
-#: settings.php:287 ../includes/class-supporter.php:243 ../includes/class-
+#: ../includes/class-supporter-settings.php:285 ../includes/class-supporter-
+#: settings.php:294 ../includes/class-supporter.php:243 ../includes/class-
 #: supporter.php:252
 msgid "Cheatin&#8217; huh?"
 msgstr ""

@@ -79,7 +79,10 @@ function shortcodeBootstrapGrid( $atts ) {
 		</ul>
 	<?php
 
-    wp_enqueue_style('awesome-font', '//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css');
+	$includeAwesomeFont = get_option('supporter_include_fontawesome_cdn', false);
+	if($includeAwesomeFont) {
+    	wp_enqueue_style('awesome-font', '//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css');
+	}
 }
 
 add_shortcode( 'supporter-bootstrap-grid', 'shortcodeBootstrapGrid' );

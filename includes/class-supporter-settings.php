@@ -125,6 +125,13 @@ class Supporter_Settings {
 					'type'			=> 'textarea',
 					'default'		=> '',
 					'placeholder'	=> __( 'Enter custom CSS here', 'supporter' )
+				),
+				array(
+					'id' 			=> 'include_fontawesome_cdn',
+					'label'			=> __( 'Include AwesomeFont CDN' , 'supporter' ),
+					'description'	=> __( 'Include AwesomeFont CSS from CDN', 'supporter' ),
+					'type'			=> 'checkbox',
+					'default'		=> false
 				)
 			)
 		);
